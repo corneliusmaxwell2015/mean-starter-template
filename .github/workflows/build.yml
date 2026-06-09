@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Use Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - name: Skip root install (no dependencies)
         run: echo "No root dependencies"
 
