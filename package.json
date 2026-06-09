@@ -1,0 +1,14 @@
+{
+  "name": "mean-starter-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run start --workspaces",
+    "install-all": "npm install --workspaces"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ]
+}
