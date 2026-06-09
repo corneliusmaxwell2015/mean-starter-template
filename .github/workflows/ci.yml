@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install root dependencies
-        run: npm install
+      
+      - name: Skip root install (no dependencies)
+        run: echo "No root dependencies"
 
       - name: Install server dependencies
         run: npm install --prefix server
