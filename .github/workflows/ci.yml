@@ -1,4 +1,4 @@
-name: CI (No Build)
+name: CI
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Skip root install (no dependencies)
         run: echo "No root dependencies"
 
@@ -21,3 +21,9 @@ jobs:
 
       - name: Install client dependencies
         run: npm install --prefix client
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli --unsafe-perm
+
+      - name: Build Angular client
+        run: npm run build --prefix client
