@@ -1,5 +1,5 @@
 # MEAN Starter Template (MongoDB • Express • Angular • Node)
-
+ 
 A clean, modern, production‑ready MEAN stack starter template with:
 
 - JWT Authentication (Login + Register)
