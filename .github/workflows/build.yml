@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install root dependencies
-        run: npm install
+      - name: Skip root install (no dependencies)
+        run: echo "No root dependencies"
 
       - name: Install server dependencies
         run: npm install --prefix server
@@ -23,7 +23,7 @@ jobs:
         run: npm install --prefix client
 
       - name: Install Angular CLI
-        run: npm install -g @angular/cli
+        run: npm install -g @angular/cli --unsafe-perm
 
       - name: Build Angular client
         run: npm run build --prefix client
