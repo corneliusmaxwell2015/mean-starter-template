@@ -37,4 +37,3 @@ This template is designed for developers who want a fast, scalable foundation fo
 ---
 
 ## 📁 Project Structure
-
