@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ../server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mean-starter
+    depends_on:
+      - mongo
+
+  client:
+    build:
+      context: ../client
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - server
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
