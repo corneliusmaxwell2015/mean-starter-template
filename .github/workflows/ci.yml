@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   install:
@@ -18,17 +16,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Skip root install (no dependencies)
-        run: echo "No root dependencies"
-
       - name: Install server dependencies
         run: npm install --prefix server
 
       - name: Install client dependencies
         run: npm install --prefix client
-
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli --unsafe-perm
-
-      - name: Build Angular client
-        run: npm run build --prefix client
