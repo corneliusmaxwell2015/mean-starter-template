@@ -1,4 +1,4 @@
-name: CI
+name: CI (No Build)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
 
     steps:
